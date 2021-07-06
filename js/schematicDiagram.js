@@ -590,7 +590,7 @@ function controlLocation() {
 		if (thandlex % 2 == 0) {
 			//驾驶台控制
 			document.getElementById('pswitch4').style.display = 'none';
-			$('#touming4').on('click',function(){    //把事件放在函数里面！！！！
+			$('#touming4').on('click',function(){    
 				$('#pswitch4').css('display','none');
 				document.getElementById('glbridgeControlLed').style.backgroundColor = '#00FF00';
 				document.getElementById('glcontrolRoomControlLed').style.backgroundColor = ' #085A13';

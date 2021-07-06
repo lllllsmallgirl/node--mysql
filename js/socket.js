@@ -75,6 +75,7 @@ socket.on('tlever',function(e1,e2,e3){
         schematicX = 1; //气动逻辑为状态1：气动逻辑完成
     };
 })
+
 var conbtn1 = document.getElementById('conBefore')//原始工况
 conbtn1.addEventListener('click',function(){
     console.log('点击原始工况')
@@ -719,7 +720,7 @@ socket.on('lbtn1click',function(e1){
         document.getElementById('becr').style.borderColor = 'white';
         document.getElementById('blocal').style.borderColor = '#FFC200';
         document.getElementById('bbridgeLed').style.backgroundColor = 'white';
-        document.getElementById('becrLed').style.backgroundColor = 'white';
+        // document.getElementById('becrLed').style.backgroundColor = 'white';
         document.getElementById('blocalLed').style.backgroundColor = '#FFC200';
     }
 })
@@ -729,31 +730,74 @@ lbtn2.addEventListener('click',function(){
     socket.emit('lbtn2click',lbtn1sio)
 })
 socket.on('lbtn2click',function(e1){
-    controlLocation();
+    // controlLocation();
 
     if(e1 == 2){
-        $('#pswitch4').css('display', 'none');
-        document.getElementById('plbcr').style.borderColor = '#FFC200';
-        document.getElementById('plecr').style.borderColor = 'white';
-        document.getElementById('plloc').style.borderColor = 'white';
-        document.getElementById('pllocled').style.backgroundColor = 'white';
+        // $('#pswitch4').css('display', 'none');
+        // document.getElementById('plbcr').style.borderColor = '#FFC200';
+        // document.getElementById('plbcrled').style.backgroundColor = '#FFC200';
+        // document.getElementById('plecr').style.borderColor = 'white';
+        // document.getElementById('plloc').style.borderColor = 'white';
+        // document.getElementById('pllocled').style.backgroundColor = 'white';
+
+        // document.getElementById('lbcrled').style.backgroundColor = '#FFC200';
+		// document.getElementById('lecrled').style.backgroundColor = 'white';
+		// document.getElementById('llocled').style.backgroundColor = 'white';
+		// document.getElementById('lbcr').style.borderColor = '#FFC200';
+		// document.getElementById('lecr').style.borderColor = 'white';
+		// document.getElementById('lloc').style.borderColor = 'white';
+
+		// document.getElementById('glemergencyControlLed').style.backgroundColor = 'rgb(128, 0, 0)';
+		// document.getElementById('glbridgeControlLed').style.backgroundColor = '#00FF00';
+		// document.getElementById('glcontrolRoomControlLed').style.backgroundColor = ' #085A13';
+
+		// document.getElementById('plemergencyControlLed').style.backgroundColor ='rgb(128, 0, 0)' ;
+		// document.getElementById('plbridgeControlLed').style.backgroundColor = '#00FF00';
+		// document.getElementById('plcontrolRoomControlLed').style.backgroundColor = ' #085A13';
+
+		// document.getElementById('olemergencyControlLed').style.backgroundColor = 'rgb(128, 0, 0)';
+		// document.getElementById('olbridgeControlLed').style.backgroundColor = '#00FF00';
+		// document.getElementById('olcontrolRoomControlLed').style.backgroundColor = ' #085A13';
+
+		// document.getElementById('tlemergencyControlLed').style.backgroundColor = 'rgb(128, 0, 0)';
+		// document.getElementById('tlbridgeControlLed').style.backgroundColor = '#00FF00';
+		// document.getElementById('tlcontrolRoomControlLed').style.backgroundColor = ' #085A13';
+
+        // document.getElementById('lcontrolRoomControlLed').style.backgroundColor = ' #085A13';
+		// document.getElementById('lemergencyControlLed').style.backgroundColor = 'rgb(128, 0, 0)';
+		// document.getElementById('lbridgeControlLed').style.backgroundColor = '#00FF00';
+
+        // document.getElementById('bbridge').style.borderColor = '#FFC200';
+		// document.getElementById('becr').style.borderColor = 'white';
+		// document.getElementById('blocal').style.borderColor = 'white';
+		// document.getElementById('bbridgeLed').style.backgroundColor = '#FFC200';
+		// document.getElementById('becrLed').style.backgroundColor = 'white';
+		// document.getElementById('blocalLed').style.backgroundColor = 'white';
+
+		// document.getElementById('tbridge').style.borderColor = '#FFC200';
+		// document.getElementById('tecr').style.borderColor = 'white';
+		// document.getElementById('tlocal').style.borderColor = 'white';
+		// document.getElementById('tbridgeLed').style.backgroundColor = '#FFC200';
+		// document.getElementById('ttecrLed').style.backgroundColor = 'white';
+		// document.getElementById('tlocalLed').style.backgroundColor = 'white';
+
         if(thandlex % 2 == 1){//集控室控制
 
             document.getElementById('glemergencyControlLed').style.backgroundColor = ' #085A13';
             document.getElementById('glbridgeControlLed').style.backgroundColor = '#085A13';
-            document.getElementById('glcontrolRoomControlLed').style.backgroundColor = '#FF0000';
+            document.getElementById('glcontrolRoomControlLed').style.backgroundColor = '#00FF00';
 
             document.getElementById('plemergencyControlLed').style.backgroundColor = ' #085A13';
             document.getElementById('plbridgeControlLed').style.backgroundColor = '#085A13';
-            document.getElementById('plcontrolRoomControlLed').style.backgroundColor = '#FF0000';
+            document.getElementById('plcontrolRoomControlLed').style.backgroundColor = '#00FF00';
 
             document.getElementById('olemergencyControlLed').style.backgroundColor = ' #085A13';
             document.getElementById('olbridgeControlLed').style.backgroundColor = '#085A13';
-            document.getElementById('olcontrolRoomControlLed').style.backgroundColor = '#FF0000';
+            document.getElementById('olcontrolRoomControlLed').style.backgroundColor = '#00FF00';
 
             document.getElementById('tlemergencyControlLed').style.backgroundColor = ' #085A13';
             document.getElementById('tlbridgeControlLed').style.backgroundColor = '#085A13';
-            document.getElementById('tlcontrolRoomControlLed').style.backgroundColor ='#FF0000' ;
+            document.getElementById('tlcontrolRoomControlLed').style.backgroundColor ='#00FF00' ;
 
             document.getElementById('plbcr').style.borderColor = 'white';
             document.getElementById('plecr').style.borderColor = '#FFC200';
@@ -1277,7 +1321,7 @@ socket.on('valve5click',function(e1){
 
 let valve6 = document.getElementById('valve116Comfirm')
 valve6.addEventListener('click',function(){
-    console.log('点击主起动阀')
+    console.log('脱开盘车机')
     socket.emit('valve6click',value116x)
 })
 socket.on('valve6click',function(e1){
