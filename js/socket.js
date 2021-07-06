@@ -733,96 +733,74 @@ socket.on('lbtn2click',function(e1){
     // controlLocation();
 
     if(e1 == 2){
-        // $('#pswitch4').css('display', 'none');
-        // document.getElementById('plbcr').style.borderColor = '#FFC200';
-        // document.getElementById('plbcrled').style.backgroundColor = '#FFC200';
-        // document.getElementById('plecr').style.borderColor = 'white';
-        // document.getElementById('plloc').style.borderColor = 'white';
-        // document.getElementById('pllocled').style.backgroundColor = 'white';
+        $('#pswitch4').css('display', 'none');
+		document.getElementById('plbcr').style.borderColor = '#FFC200';
+		document.getElementById('plbcrled').style.backgroundColor = '#FFC200';
+		document.getElementById('plecr').style.borderColor = 'white';
+		document.getElementById('plloc').style.borderColor = 'white';
+		document.getElementById('pllocled').style.backgroundColor = 'white';
+		document.getElementById('lbcrled').style.backgroundColor = '#FFC200';
+		document.getElementById('lecrled').style.backgroundColor = 'white';
+		document.getElementById('llocled').style.backgroundColor = 'white';
+		document.getElementById('lbcr').style.borderColor = '#FFC200';
+		document.getElementById('lecr').style.borderColor = 'white';
+		document.getElementById('lloc').style.borderColor = 'white';
 
-        // document.getElementById('lbcrled').style.backgroundColor = '#FFC200';
-		// document.getElementById('lecrled').style.backgroundColor = 'white';
-		// document.getElementById('llocled').style.backgroundColor = 'white';
-		// document.getElementById('lbcr').style.borderColor = '#FFC200';
-		// document.getElementById('lecr').style.borderColor = 'white';
-		// document.getElementById('lloc').style.borderColor = 'white';
+		document.getElementById('glemergencyControlLed').style.backgroundColor = 'rgb(128, 0, 0)';
+		document.getElementById('glbridgeControlLed').style.backgroundColor = '#00FF00';
+		document.getElementById('glcontrolRoomControlLed').style.backgroundColor = ' #085A13';
 
-		// document.getElementById('glemergencyControlLed').style.backgroundColor = 'rgb(128, 0, 0)';
-		// document.getElementById('glbridgeControlLed').style.backgroundColor = '#00FF00';
-		// document.getElementById('glcontrolRoomControlLed').style.backgroundColor = ' #085A13';
+		document.getElementById('plemergencyControlLed').style.backgroundColor ='rgb(128, 0, 0)' ;
+		document.getElementById('plbridgeControlLed').style.backgroundColor = '#00FF00';
+		document.getElementById('plcontrolRoomControlLed').style.backgroundColor = ' #085A13';
 
-		// document.getElementById('plemergencyControlLed').style.backgroundColor ='rgb(128, 0, 0)' ;
-		// document.getElementById('plbridgeControlLed').style.backgroundColor = '#00FF00';
-		// document.getElementById('plcontrolRoomControlLed').style.backgroundColor = ' #085A13';
+		document.getElementById('olemergencyControlLed').style.backgroundColor = 'rgb(128, 0, 0)';
+		document.getElementById('olbridgeControlLed').style.backgroundColor = '#00FF00';
+		document.getElementById('olcontrolRoomControlLed').style.backgroundColor = ' #085A13';
 
-		// document.getElementById('olemergencyControlLed').style.backgroundColor = 'rgb(128, 0, 0)';
-		// document.getElementById('olbridgeControlLed').style.backgroundColor = '#00FF00';
-		// document.getElementById('olcontrolRoomControlLed').style.backgroundColor = ' #085A13';
+		document.getElementById('tlemergencyControlLed').style.backgroundColor = 'rgb(128, 0, 0)';
+		document.getElementById('tlbridgeControlLed').style.backgroundColor = '#00FF00';
+		document.getElementById('tlcontrolRoomControlLed').style.backgroundColor = ' #085A13';
 
-		// document.getElementById('tlemergencyControlLed').style.backgroundColor = 'rgb(128, 0, 0)';
-		// document.getElementById('tlbridgeControlLed').style.backgroundColor = '#00FF00';
-		// document.getElementById('tlcontrolRoomControlLed').style.backgroundColor = ' #085A13';
+		document.getElementById('lcontrolRoomControlLed').style.backgroundColor = ' #085A13';
+		document.getElementById('lemergencyControlLed').style.backgroundColor = 'rgb(128, 0, 0)';
+		document.getElementById('lbridgeControlLed').style.backgroundColor = '#00FF00';
 
-        // document.getElementById('lcontrolRoomControlLed').style.backgroundColor = ' #085A13';
-		// document.getElementById('lemergencyControlLed').style.backgroundColor = 'rgb(128, 0, 0)';
-		// document.getElementById('lbridgeControlLed').style.backgroundColor = '#00FF00';
-
-        // document.getElementById('bbridge').style.borderColor = '#FFC200';
-		// document.getElementById('becr').style.borderColor = 'white';
-		// document.getElementById('blocal').style.borderColor = 'white';
-		// document.getElementById('bbridgeLed').style.backgroundColor = '#FFC200';
+		document.getElementById('bbridge').style.borderColor = '#FFC200';
+		document.getElementById('becr').style.borderColor = 'white';
+		document.getElementById('blocal').style.borderColor = 'white';
+		document.getElementById('bbridgeLed').style.backgroundColor = '#FFC200';
 		// document.getElementById('becrLed').style.backgroundColor = 'white';
-		// document.getElementById('blocalLed').style.backgroundColor = 'white';
+		document.getElementById('blocalLed').style.backgroundColor = 'white';
 
-		// document.getElementById('tbridge').style.borderColor = '#FFC200';
-		// document.getElementById('tecr').style.borderColor = 'white';
-		// document.getElementById('tlocal').style.borderColor = 'white';
-		// document.getElementById('tbridgeLed').style.backgroundColor = '#FFC200';
-		// document.getElementById('ttecrLed').style.backgroundColor = 'white';
-		// document.getElementById('tlocalLed').style.backgroundColor = 'white';
+		document.getElementById('tbridge').style.borderColor = '#FFC200';
+		document.getElementById('tecr').style.borderColor = 'white';
+		document.getElementById('tlocal').style.borderColor = 'white';
+		document.getElementById('tbridgeLed').style.backgroundColor = '#FFC200';
+		document.getElementById('ttecrLed').style.backgroundColor = 'white';
+		document.getElementById('tlocalLed').style.backgroundColor = 'white';
 
-        if(thandlex % 2 == 1){//集控室控制
+		if(thandlex % 2 == 1){//集控室控制
+			document.getElementById('glcontrolRoomControlLed').style.backgroundColor = ' #00FF00';
 
-            document.getElementById('glemergencyControlLed').style.backgroundColor = ' #085A13';
-            document.getElementById('glbridgeControlLed').style.backgroundColor = '#085A13';
-            document.getElementById('glcontrolRoomControlLed').style.backgroundColor = '#00FF00';
-
-            document.getElementById('plemergencyControlLed').style.backgroundColor = ' #085A13';
-            document.getElementById('plbridgeControlLed').style.backgroundColor = '#085A13';
-            document.getElementById('plcontrolRoomControlLed').style.backgroundColor = '#00FF00';
-
-            document.getElementById('olemergencyControlLed').style.backgroundColor = ' #085A13';
-            document.getElementById('olbridgeControlLed').style.backgroundColor = '#085A13';
-            document.getElementById('olcontrolRoomControlLed').style.backgroundColor = '#00FF00';
-
-            document.getElementById('tlemergencyControlLed').style.backgroundColor = ' #085A13';
-            document.getElementById('tlbridgeControlLed').style.backgroundColor = '#085A13';
-            document.getElementById('tlcontrolRoomControlLed').style.backgroundColor ='#00FF00' ;
-
-            document.getElementById('plbcr').style.borderColor = 'white';
-            document.getElementById('plecr').style.borderColor = '#FFC200';
-            document.getElementById('plloc').style.borderColor = 'white';
-            document.getElementById('lbcr').style.borderColor ='white' ;
-            document.getElementById('lecr').style.borderColor = '#FFC200';
-            document.getElementById('lloc').style.borderColor = 'white';
-            document.getElementById('lbcrled').style.backgroundColor = 'white';
-            document.getElementById('lecrled').style.backgroundColor = '#FFC200';
-            document.getElementById('llocled').style.backgroundColor = 'white';
-            document.getElementById('plbcrled').style.backgroundColor = 'white';
-            document.getElementById('plecrled').style.backgroundColor = '#FFC200';
-            document.getElementById('pllocled').style.backgroundColor = 'white';
-            document.getElementById('tbridgeLed').style.backgroundColor = 'white';
-            document.getElementById('ttecrLed').style.backgroundColor = '#FFC200';
-            document.getElementById('tlocalLed').style.backgroundColor = 'white';
-            document.getElementById('tbridge').style.borderColor = 'white';
-            document.getElementById('tecr').style.borderColor = '#FFC200';
-            document.getElementById('tlocal').style.borderColor = 'white';
-            document.getElementById('bbridgeLed').style.backgroundColor = 'white';
-            document.getElementById('btecrLed').style.backgroundColor = '#FFC200';
-            document.getElementById('blocalLed').style.backgroundColor = 'white';
-            document.getElementById('bbridge').style.borderColor = 'white';
-            document.getElementById('becr').style.borderColor = '#FFC200';
-            document.getElementById('blocal').style.borderColor = 'white';
+			document.getElementById('plbcr').style.borderColor = 'white';
+			document.getElementById('plecr').style.borderColor = '#FFC200';
+			document.getElementById('plloc').style.borderColor = 'white';
+			document.getElementById('lbcr').style.borderColor ='white' ;
+			document.getElementById('lecr').style.borderColor = '#FFC200';
+			document.getElementById('lloc').style.borderColor = 'white';
+			document.getElementById('tbridgeLed').style.backgroundColor = 'white';
+			document.getElementById('ttecrLed').style.backgroundColor = '#FFC200';
+			document.getElementById('tlocalLed').style.backgroundColor = 'white';
+			document.getElementById('tbridge').style.borderColor = 'white';
+			document.getElementById('tecr').style.borderColor = '#FFC200';
+			document.getElementById('tlocal').style.borderColor = 'white';
+			document.getElementById('bbridgeLed').style.backgroundColor = 'white';
+			document.getElementById('btecrLed').style.backgroundColor = '#FFC200';
+			document.getElementById('blocalLed').style.backgroundColor = 'white';
+			document.getElementById('bbridge').style.borderColor = 'white';
+			document.getElementById('becr').style.borderColor = '#FFC200';
+			document.getElementById('blocal').style.borderColor = 'white';
         }
         document.getElementById('lhandle1').style.transformOrigin = '31% 31%';
         document.getElementById('lhandle1').style.transform = 'rotate(' + 0 + 'deg)';
